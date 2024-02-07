@@ -1,4 +1,4 @@
-
+/* RESET */
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -44,4 +44,19 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+/*STYLES*/
+
+#title {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+#title-text {
+  font-size: 40px;
+  padding: 8px;
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: 0 0 10px 2px rgb(205, 239, 250);
 }
