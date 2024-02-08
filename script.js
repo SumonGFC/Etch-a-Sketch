@@ -8,3 +8,7 @@ function createGrid(size=16) {
     */
     return;
 }
+
+
+// For displaying value of input range slider:
+// https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
