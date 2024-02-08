@@ -9,18 +9,18 @@ function createGrid(size=16) {
     return;
 }
 
-
-// For displaying value of input range slider:
-// https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
-
-// Update Grid-size Code
-let gridSize;
-const sizeSlider = document.getElementById("size-select");
+// Get HTML
+const sliderInput = document.getElementById("size-select");
 const sizeDisplay = document.getElementById("size-output");
 const updateSizeBtn = document.getElementById("update-size-btn");
 
-sizeSlider.addEventListener("input", () => {
-    sizeDisplay.textContent = (sizeSlider.value)**2;
+// Initialize Grid Size
+let gridSize = parseInt(sizeDisplay.value);
+
+// Set Grid Size
+sliderInput.addEventListener("input", () => {
+    const size = sliderInput.value;
+    sizeDisplay.textContent = size + "x" + size;
 });
 
 
