@@ -67,4 +67,6 @@ body {
   height: 0;
   width: 30%;
   padding-bottom: 30%;
+  display: flex;
+  flex-wrap: wrap;
 }

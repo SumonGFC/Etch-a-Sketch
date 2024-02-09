@@ -1,21 +1,8 @@
-function createGrid(size=16) {
-    /* Create a square size x size grid 
-    - declare variable to store a div
-    - for i = 0,...,size:
-        create a div element (i.e. on of the grid squares)
-        append the div to the container in the html
-      
-    */
-    return;
-}
-
 // Get HTML
 const sliderInput = document.getElementById("size-select");
 const sizeDisplay = document.getElementById("size-output");
 const updateSizeBtn = document.getElementById("update-size-btn");
-
-// Initialize Grid Size
-let gridSize = parseInt(sizeDisplay.value);
+const gridBox = document.getElementById("grid");
 
 // Set Grid Size
 sliderInput.addEventListener("input", () => {
@@ -23,4 +10,17 @@ sliderInput.addEventListener("input", () => {
     sizeDisplay.textContent = size + "x" + size;
 });
 
+updateSizeBtn.addEventListener("click", () => {
+    const gridDim = parseInt(sliderInput.value);
+    const squareLength = (100/gridDim).toString() + "%";
 
+    for (let i = 0; i < gridDim; ++i) {
+        gridBox.appendChild(createSquare(squareLength));
+    };
+})
+
+function createSquare(squareLength) {
+    const div = document.createElement("div");
+    div.setAttribute("style", `border: 1px solid black; width: ${squareLength}; height: ${squareLength};`);
+    return div;
+}
