@@ -4,12 +4,13 @@ const sizeDisplay = document.getElementById("size-output");
 const updateSizeBtn = document.getElementById("update-size-btn");
 const gridBox = document.getElementById("grid");
 
-// Set Grid Size
+// Update grid size display
 sliderInput.addEventListener("input", () => {
     const size = sliderInput.value;
     sizeDisplay.textContent = size + "x" + size;
 });
 
+// Create new grid on button click
 updateSizeBtn.addEventListener("click", () => {
     const gridDim = parseInt(sliderInput.value);
     const squareLength = (100/gridDim).toString() + "%";
@@ -21,6 +22,9 @@ updateSizeBtn.addEventListener("click", () => {
     };
 })
 
+// Display random colour on hover
+
+// Functions
 function createSquare(squareLength) {
     const div = document.createElement("div");
     div.setAttribute("style",
@@ -29,4 +33,9 @@ function createSquare(squareLength) {
     width: ${squareLength}; \
     height: ${squareLength};`);
     return div;
+}
+
+function getRandomColor () {
+    // make random rgb color
+    return;
 }
