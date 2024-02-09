@@ -27,7 +27,6 @@ p, h1, h2, h3, h4, h5, h6 {
 /* STYLES */
 
 body {
-  border: 5px solid green;  /*To-Be-Deleted (TBD)*/
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -55,7 +54,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 100%;
 }
 
 #grid-config {
@@ -63,10 +61,9 @@ body {
 }
 
 #grid {
-  border: 3px solid pink;  /*TBD*/
-  height: 0;
-  width: 30%;
-  padding-bottom: 30%;
+  border: 1px solid black;  /*TBD*/
+  width: 50vh;
+  height: 50vh;
   display: flex;
   flex-wrap: wrap;
 }
