@@ -32,6 +32,7 @@ function createSquare(squareLength) {
     border-top: 1px solid black;\
     width: ${squareLength}; \
     height: ${squareLength};`);
+    div.setAttribute("class", "grid-square");
     return div;
 }
 
