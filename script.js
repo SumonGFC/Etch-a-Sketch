@@ -20,9 +20,18 @@ updateSizeBtn.addEventListener("click", () => {
     for (let i = 0; i < gridDim**2; ++i) {
         gridBox.appendChild(createSquare(squareLength));
     };
+    // Store new divs
+    const gridSquare = document.querySelectorAll(".grid-square");
+    // add mouseover event listener to each square.
+    gridSquare.forEach((square) => {
+        square.addEventListener("mouseover", () => {
+            const r = getRandomByte();
+            const g = getRandomByte();
+            const b = getRandomByte();
+            square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+    });
 })
-
-// Display random colour on hover
 
 // Functions
 function createSquare(squareLength) {
@@ -36,7 +45,6 @@ function createSquare(squareLength) {
     return div;
 }
 
-function getRandomColor () {
-    // make random rgb color
-    return;
+function getRandomByte() {
+    return Math.floor(Math.random()*256);
 }
